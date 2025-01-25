@@ -97,6 +97,7 @@ func generateAiTask(c *fiber.Ctx) error {
 		return c.Status(400).JSON(fiber.Map{"error": "Invalid request body"})
 	}
 
+	// need to correct the logic
 	// Gemini API key setup
 	geminiApiKey := os.Getenv("GEMINI_API_KEY")
 	if geminiApiKey == "" {
